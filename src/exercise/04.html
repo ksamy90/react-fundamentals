@@ -16,8 +16,8 @@
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
     const element = (
       <div className="container">
-        <div className="message">{message({ children: 'Hello World' })}</div>
-        <div className="message">{message({ children: 'Goodbye World' })}</div>
+        <div className="message">{React.createElement(message, { children: 'Hello World' })}</div>
+        <div className="message">{React.createElement(message, { children: 'Goodbye World' })}</div>
       </div>
     )
 
