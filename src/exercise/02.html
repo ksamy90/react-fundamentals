@@ -20,9 +20,9 @@
     // 💣 So go ahead and delete this implementation (or comment it out for now)
     // These three lines are similar to React.createElement // 💰 in React, you set this with the "children" prop
 
-    const helloElement = React.createElement('span', { children: 'Hello' })
-    const worldElement = React.createElement('span', { children: 'World' })
-    const reactElement = React.createElement('div', { className: 'container', children: [helloElement, ' ', worldElement] })
+    const helloElement = React.createElement('span', {}, 'Hello')
+    const worldElement = React.createElement('span', {}, 'World')
+    const reactElement = React.createElement('div', { className: 'container' }, helloElement, ' ', worldElement)
     const root = ReactDOM.createRoot(rootElement)
     root.render(reactElement)
   </script>
