@@ -28,8 +28,10 @@
 </head>
 
 <body>
-    <div id="root"></div>
     <script>
+        const rootNode = document.createElement('div')
+        rootNode.setAttribute('id', 'root')
+        document.getElementsByTagName('body')[0].append(rootNode)
         const element = document.createElement('div')
         element.textContent = 'Hello World'
         element.className = 'container'
