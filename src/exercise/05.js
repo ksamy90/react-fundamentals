@@ -32,11 +32,7 @@ import '../box-styles.css'
 
 // using custom component
 function Box(props) {
-  return (
-    <div className={`box box--${props.size}`} {...props}>
-      {props.children}
-    </div>
-  )
+  return <div className={`box box--${props.size}`} {...props} />
 }
 
 function App() {
