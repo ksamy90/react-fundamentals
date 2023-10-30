@@ -32,26 +32,27 @@ import '../box-styles.css'
 
 // using custom component
 function Box(props) {
-  return <div {...props}>{props.children}</div>
+  return (
+    <div className={`box box--${props.size}`} {...props}>
+      {props.children}
+    </div>
+  )
 }
 
 function App() {
   return (
     <div>
       <Box
-        className="box box--small"
+        size="small"
         style={{backgroundColor: 'lightblue', fontStyle: 'italic'}}
       >
         small lightblue box
       </Box>
-      <Box
-        className="box box--medium"
-        style={{backgroundColor: 'pink', fontStyle: 'italic'}}
-      >
+      <Box size="medium" style={{backgroundColor: 'pink', fontStyle: 'italic'}}>
         medium pink box
       </Box>
       <Box
-        className="box box--large"
+        size="large"
         style={{backgroundColor: 'orange', fontStyle: 'italic'}}
       >
         large orange box
