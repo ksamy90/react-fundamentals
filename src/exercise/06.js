@@ -8,7 +8,7 @@ function UsernameForm({onSubmitUsername}) {
   const [username, setUsername] = React.useState(null)
 
   const handleChange = evt => {
-    const value = evt.target.value
+    const {value} = evt.target
     setUsername(value.toLowerCase())
   }
 
@@ -35,7 +35,7 @@ function UsernameForm({onSubmitUsername}) {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="username">Username:</label>
-        <input type="text" onChange={handleChange} />
+        <input id="username" type="text" onChange={handleChange} />
       </div>
       <button type="submit">Submit</button>
     </form>
